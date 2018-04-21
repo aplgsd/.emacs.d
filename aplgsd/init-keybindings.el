@@ -2,6 +2,8 @@
 
 (global-set-key (kbd "<f1>") 'open-my-init-file)
 
+(global-set-key (kbd "<f3>") 'find-file)
+
 ;; 查詢方法
 (global-set-key (kbd "C-h C-f") 'find-function)
 ;; 查詢變量
