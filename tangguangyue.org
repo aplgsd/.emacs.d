@@ -1,0 +1,18 @@
+* 汤光月的emacs配置
+** 初始化所有的packages
+#+BEGIN_SRC emacs-lisp
+(package-initialize)
+#+END_SRC
+
+** 配置loadPath
+#+BEGIN_SRC emacs-lisp
+;; 加载路径
+(add-to-list 'load-path "~/.emacs.d/aplgsd/")
+
+(defun open-my-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
+(require 'init-keybindings)
+#+END_SRC
+
