@@ -2,6 +2,12 @@
 (require 'org)
 (setq org-src-fontify-natively t)
 
+;; org mode keybindings
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;; org mode template remember
+(global-set-key (kbd "C-c r") 'org-capture)
+
 ;; org模式的设置
 (setq org-agenda-files '("/org_folder/day_task"))
 
