@@ -70,7 +70,7 @@
  	 (package-install pkg))))
 
 ;; 自动加载主题
-(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; popwin的设置
 (require 'popwin)
