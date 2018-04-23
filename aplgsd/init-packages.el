@@ -74,7 +74,7 @@
 
 (which-key-mode 1)
 ;; 设置提示窗口在右边显示
-(setq which-key-side-window-location 'right)
+(setq which-key-side-window-location 'bottom)
 
 ;; python company mode设置
 (add-hook 'python-mode-hook
