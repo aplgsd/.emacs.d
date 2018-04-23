@@ -1,14 +1,6 @@
 ;; cl - Common Lisp Extension
 (require 'cl)
 
-;; (when (>= emacs-major-version 24)
-;;      (require 'package)
-;;      (package-initialize)
-;;      (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("melpa" . "http://melpa.org/packages/"))))
-
-;; ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
-
 ;; Add Packages
 (defvar my/packages '(
  		;; --- Auto-completion ---
@@ -70,7 +62,7 @@
  	 (package-install pkg))))
 
 ;; 自动加载主题
-(load-theme 'solarized-dark t)
+(load-theme 'monokai t)
 
 ;; popwin的设置
 (require 'popwin)
