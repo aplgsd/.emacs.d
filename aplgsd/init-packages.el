@@ -3,63 +3,67 @@
 
 ;; Add Packages
 (defvar my/packages '(
- 		;; --- Auto-completion ---
- 		company
- 		;; --- Better Editor ---
- 	        hungry-delete
- 		swiper
- 		counsel
- 		smartparens
- 		;; --- Major Mode ---
- 		js2-mode
- 		;; --- Minor Mode ---
- 		nodejs-repl
- 		exec-path-from-shell
- 		popwin
- 		;; --- Themes ---
- 		monokai-theme
-		solarized-theme
- 		silkworm-theme
- 		;;reveal-in-osx-finder
- 		;; --- Web Mode ---
- 		web-mode
- 		;; --- js2 Mode ---
- 		js2-refactor
- 		;; --- 语法检查 ---
- 		flycheck
- 		;; --- expand-region ---
- 		expand-region
- 		;; --- iedit ---
- 		iedit
- 		;; --- org pomodoro番茄工作钟 ---
- 		org-pomodoro
- 		;; --- 全局检索工具 ag ---
- 		helm-ag
- 		;; Evil
- 		evil
- 		;; window numbering
- 		window-numbering
-;; 		;; powerline
-;; 		;; powerline
-;; 		;; evil surround
- 		evil-surround
- 		evil-nerd-commenter
- 		which-key
- 		) "Default packages")
+                ;; --- Auto-completion ---
+                company
+                ;; --- Better Editor ---
+                hungry-delete
+                swiper
+                counsel
+                smartparens
+                ;; --- Major Mode ---
+                js2-mode
+                ;; --- Minor Mode ---
+                nodejs-repl
+                exec-path-from-shell
+                popwin
+                ;; --- Themes ---
+                monokai-theme
+                solarized-theme
+                silkworm-theme
+                ;;reveal-in-osx-finder
+                ;; --- Web Mode ---
+                web-mode
+                ;; --- js2 Mode ---
+                js2-refactor
+                ;; --- 语法检查 ---
+                flycheck
+                ;; --- expand-region ---
+                expand-region
+                ;; --- iedit ---
+                iedit
+                ;; --- org pomodoro番茄工作钟 ---
+                org-pomodoro
+                ;; --- 全局检索工具 ag ---
+                helm-ag
+                ;; Evil
+                evil
+                ;; window numbering
+                window-numbering
+;;              ;; powerline
+;;              ;; powerline
+;;              ;; evil surround
+                evil-surround
+                evil-nerd-commenter
+                which-key
+                ;; Code 
+                yasnippet
+                ;;
+                expand-region
+                ) "Default packages")
 
 (setq package-selected-packages my/packages)
 
 (defun my/packages-installed-p ()
     (loop for pkg in my/packages
-	  when (not (package-installed-p pkg)) do (return nil)
- 	   finally (return t)))
+          when (not (package-installed-p pkg)) do (return nil)
+           finally (return t)))
 
 (unless (my/packages-installed-p)
       (message "%s" "Refreshing package database...")
       (package-refresh-contents)
       (dolist (pkg my/packages)
         (when (not (package-installed-p pkg))
- 	 (package-install pkg))))
+         (package-install pkg))))
 
 ;; 自动加载主题
 (load-theme 'monokai t)
@@ -68,18 +72,29 @@
 (require 'popwin)
 (popwin-mode t)
 
-;; evil-surround
-(require 'evil-surround)
-(global-evil-surround-mode 1)
-
 (which-key-mode 1)
 ;; 设置提示窗口在右边显示
-(setq which-key-side-window-location 'bottom)
+(setq which-key-side-window-location 'right)
 
 ;; python company mode设置
 (add-hook 'python-mode-hook
-	  (lambda ()
-	    (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev))))
+          (lambda ()
+            (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev))))
+
+;; =============== helm - config =======================
+(require 'init-helm)
+
+;; =============== yasnippet start =======================
+;; (yas-reload-all)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
+;; =============== yasnippet End =======================
+
+;; =============== expand-region start =======================
+(global-set-key (kbd "C-=") 'er/expand-region)
+;; =============== expand-region end =======================
 
 (provide 'init-packages)
+
+
+
 

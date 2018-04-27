@@ -5,6 +5,8 @@
         ("melpa" . "http://melpa.org/packages/")
         ("org" . "http://orgmode.org/elpa/")))
 
+;;(setenv "PATH" ("/" (getenv "PATH")))+
+
 ;; org-mode 的设置
 (require 'org-install)
 (require 'ob-tangle)
