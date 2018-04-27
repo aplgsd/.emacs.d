@@ -35,6 +35,35 @@
 ;; line wrap
 (global-set-key (kbd "C-c t") 'toggle-truncate-lines)
 
+;; =================================================
+;; ;; 日本語入力
+;; (setq default-input-method "japanese-mozc")
+;; ;; 日本語をデフォルトにする。
+;; (set-language-environment "Japanese")
+;; ;; mozcをロードできるようにする（必要に応じて）。
+;; (push "/usr/share/emacs/site-lisp/emacs-mozc/" load-path)
+;; ;; anthy.elをロードする
+;; (load-library "mozc")
+;; (load-file "/usr/share/emacs/site-lisp/emacs-mozc/mozc.el")
+;; ;; japanese-anthyをディフォルトのinput-methodにする。
+;; (global-set-key (kbd "C-o") 'toggle-input-method)
+;; (prefer-coding-system 'utf-8)
+
+;; =================================================
+;; 日本語入力
+(setq default-input-method "japanese-anthy")
+;; 日本語をデフォルトにする。
+(set-language-environment "Japanese")
+;; mozcをロードできるようにする（必要に応じて）。
+(push "/usr/share/emacs/site-lisp/anthy/" load-path)
+;; anthy.elをロードする
+(load-library "anthy")
+(load-file "/usr/share/emacs/site-lisp/anthy/leim-list.el")
+;; japanese-anthyをディフォルトのinput-methodにする。
+(global-set-key (kbd "C-o") 'toggle-input-method)
+(prefer-coding-system 'utf-8)
+
+
 (provide 'init-ui)
 
 
