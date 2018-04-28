@@ -55,4 +55,11 @@
 ;; ================== emacs tag =======================
 (setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ("laptop" . ?l)))
 
+;; ================== 简单任务关系 =======================
+(setq org-enforce-todo-dependencies t)
+
+;; ================== 複雑任务关系 =======================
+(require 'org-depend)
+
+
 (provide 'init-org)
