@@ -8,4 +8,10 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(require 'init-org)
+(require 'init-ui)
+(require 'init-better-defaults)
+(require 'init-packages)
+(require 'init-program)
+(require 'custom)
 (require 'init-keybindings)

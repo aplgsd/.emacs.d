@@ -72,6 +72,10 @@
 ;; -------------------- コマンド: helm-lisp-completion-at-point ---------------------
 (setq helm-lisp-fuzzy-completion t)
 
+;; --------------------- コマンド: helm-ls-gits -----------------------------
+(global-set-key (kbd "C-c h g") 'helm-browse-project)
+
+
 (helm-mode t)
 
 (provide 'init-helm)
