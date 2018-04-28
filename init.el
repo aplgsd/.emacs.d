@@ -19,3 +19,4 @@
 (require 'init-program)
 (require 'custom)
 
+(put 'upcase-region 'disabled nil)
