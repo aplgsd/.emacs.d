@@ -74,6 +74,7 @@
 
 ;; --------------------- コマンド: helm-ls-gits -----------------------------
 (global-set-key (kbd "C-c h g") 'helm-browse-project)
+(global-set-key (kbd "C-c h g") 'helm-browse-project)
 
 
 (helm-mode t)

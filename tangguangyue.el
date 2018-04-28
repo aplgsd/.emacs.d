@@ -13,5 +13,4 @@
 (require 'init-better-defaults)
 (require 'init-packages)
 (require 'init-program)
-(require 'custom)
 (require 'init-keybindings)

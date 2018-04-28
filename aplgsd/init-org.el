@@ -9,22 +9,22 @@
 (global-set-key (kbd "C-c r") 'org-capture)
 
 ;; org模式的设置
-(setq org-agenda-files '("/mnt/g/個人情報管理/作業フォルダ/org_folder/day_task"))
+(setq org-agenda-files '("/mnt/e/TRI/DayManage/day_task"))
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline " /mnt/g/個人情報管理/作業フォルダ/org_folder/day_task/gtd.org" "工作安排")
+      '(("t" "Todo" entry (file+headline " /mnt/e/TRI/DayManage/day_task/gtd.org" "工作安排")
 	 "* TODO [#B] %?\n  %i\n"
 	 :empty-lines 1)
-	("c" "Chrome" entry (file+headline " /mnt/g/個人情報管理/作業フォルダ/org_folder/notes.org" "Quick notes")
+	("c" "Chrome" entry (file+headline "/mnt/e/TRI/DayManage/day_task/notes.org" "Quick notes")
 	 "* TODO [#C] %?\n  %(tangguangyue/retrieve-chrome-current-tab-url)\n %i\n %U"
 	 :empty-lines 1)
 	))
 
 ;; ================== keywords faces ======================
 (setq org-todo-keywords
-  '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
-    (sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
+  '((type "工作(w)" "学习(s)" "生活(l)" "|")
+    (sequence "PENDING(p)" "TODO(t)"  "|" "DONE(d!)" "ABORT(a@/!)")
     ))
 
 ;; ================== keywords styles =======================
@@ -60,6 +60,14 @@
 
 ;; ================== 複雑任务关系 =======================
 (require 'org-depend)
+;; (defun mm/org-insert-trigger ()
+;;   "Automatically insert chain-find-next trigger when entry becomes NEXT"
+;;   (cond ((equal org-state "NEXT")
+;;          (unless org-depend-doing-chain-find-next
+;;            (org-set-property "TRIGGER" "chain-find-next(NEXT,from-current,priority-up,effort-down)")))
+;;         ((not (member org-state org-done-keywords))
+;;          (org-delete-property "TRIGGER"))))
 
+;; (add-hook 'org-after-todo-state-change-hook 'mm/org-insert-trigger)
 
 (provide 'init-org)
