@@ -1,8 +1,11 @@
-(global-set-key (kbd "<f2>") 'recentf-open-files)
-
+;; emacs init file
 (global-set-key (kbd "<f1>") 'open-my-init-file)
 
-(global-set-key (kbd "<f3>") 'find-file)
+;; recentf files 
+(global-set-key (kbd "<f2>") 'recentf-open-files)
+
+;; Day Manage
+(global-set-key (kbd "<f3>") (lambda() (interactive) (find-file "/mnt/e/TRI/DayManage")))
 
 ;; 查詢方法
 (global-set-key (kbd "C-h C-f") 'find-function)
@@ -10,7 +13,6 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 ;; 查詢快捷鍵
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
-
 
 ;; 命令补全时按C-n C-p 来上下移动选择
 (with-eval-after-load 'company

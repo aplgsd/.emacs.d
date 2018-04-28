@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (## company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell popwin monokai-theme solarized-theme silkworm-theme web-mode js2-refactor flycheck expand-region iedit org-pomodoro helm-ag evil window-numbering evil-surround evil-nerd-commenter which-key yasnippet expand-region))))
+    (helm-ls-git company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell popwin monokai-theme solarized-theme silkworm-theme web-mode js2-refactor flycheck expand-region iedit org-pomodoro helm-ag evil window-numbering evil-surround evil-nerd-commenter which-key yasnippet expand-region))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
