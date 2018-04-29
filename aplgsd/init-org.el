@@ -1,25 +1,24 @@
-;; 文档org注释里面语法高亮
+; 文档org注释里面语法高亮
 (require 'org)
 (setq org-src-fontify-natively t)
 
-;; org mode keybindings
+;;; org mode keybindings
 (global-set-key (kbd "C-c a") 'org-agenda)
-
 ;; org mode template remember
 (global-set-key (kbd "C-c r") 'org-capture)
 
 ;; org模式的设置
 (setq org-agenda-files '("/mnt/e/TRI/DayManage/day_task"))
-(add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline " /mnt/e/TRI/DayManage/day_task/gtd.org" "工作安排")
+      '(("t" "Todo" entry (file+headline "/mnt/e/TRI/DayManage/day_task/gtd.org" "工作安排")
 	 "* TODO [#B] %?\n  %i\n"
 	 :empty-lines 1)
-	("c" "Chrome" entry (file+headline "/mnt/e/TRI/DayManage/day_task/notes.org" "Quick notes")
+	("c" "Chrome" entry (file+headline "/mnt/e/TRI/DayManage/org-notes/notes.org" "Quick notes")
 	 "* TODO [#C] %?\n  %(tangguangyue/retrieve-chrome-current-tab-url)\n %i\n %U"
 	 :empty-lines 1)
 	))
+
 
 ;; ================== keywords faces ======================
 (setq org-todo-keywords
@@ -69,5 +68,6 @@
 ;;          (org-delete-property "TRIGGER"))))
 
 ;; (add-hook 'org-after-todo-state-change-hook 'mm/org-insert-trigger)
+
 
 (provide 'init-org)

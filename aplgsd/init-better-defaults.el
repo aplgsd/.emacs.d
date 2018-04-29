@@ -5,12 +5,15 @@
 
 (global-linum-mode t)
 
+
 ;;
 (abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
 					    ;;
 					    ("8ap" "aplgsd")
 					    ))
+
+
 
 ;; 禁止备份文件
 (setq make-backup-files nil)
@@ -36,16 +39,16 @@
 (delete-selection-mode t)
 
 ;; hungry-delete-mode 启用
-;; (require 'hungry-delete)
-;; (global-hungry-delete-mode)
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 
 ;; swiper 的快捷键设定
-;; (setq enable-recursive-minibuffers t)
+(setq enable-recursive-minibuffers t)
 
 ;; 右括号自动补全
-;; (require 'smartparens-config)
+(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-;; (smartparens-global-mode t)
+(smartparens-global-mode t)
 
 ;; 代码缩进
 (defun indent-buffer()
