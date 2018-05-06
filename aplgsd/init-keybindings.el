@@ -1,6 +1,8 @@
+;; switch-to-previous-buffer
+;;(global-set-key (kbd "C-c b") 'previous-buffer)
+(global-set-key (kbd "C-c b")  'mode-line-other-buffer)
 
 (global-set-key (kbd "C-c w") 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
@@ -8,6 +10,8 @@
 (global-set-key (kbd "<f2>") 'recentf-open-files)
 
 (global-set-key (kbd "<f1>") 'open-my-init-file)
+;; Day Manage
+(global-set-key (kbd "<f3>") (lambda() (interactive) (find-file "/mnt/e/TRI/DayManage")))
 
 ;; 查詢方法
 (global-set-key (kbd "C-h C-f") 'find-function)
@@ -17,7 +21,7 @@
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
 ;; 从git buffer中查找文件
-;; (global-set-key (kbd "C-c p f") 'counsel-git)
+(global-set-key (kbd "M-s f") 'counsel-git)
 
 ;; org mode keybindings
 (global-set-key (kbd "C-c a") 'org-agenda)

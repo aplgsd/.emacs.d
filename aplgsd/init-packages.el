@@ -117,6 +117,8 @@
 
 ;; 自动加载主题
 (load-theme 'monokai t)
+;;(require 'color-theme-sanityinc-tomorrow)
+;;(color-theme-sanityinc-tomorrow--define-theme day)
 
 ;; popwin的设置
 (require 'popwin)

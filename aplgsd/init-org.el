@@ -22,8 +22,7 @@
 
 ;; ================== keywords faces ======================
 (setq org-todo-keywords
-  '((type "工作(w)" "学习(s)" "生活(l)" "|")
-    (sequence "PENDING(p)" "TODO(t)"  "|" "DONE(d!)" "ABORT(a@/!)")
+  '((sequence "保留(p)" "TODO(t)"  "|" "DONE(d!)" "ABORT(a@/!)")
     ))
 
 ;; ================== keywords styles =======================
@@ -52,7 +51,7 @@
     ))
 
 ;; ================== emacs tag =======================
-(setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ("laptop" . ?l)))
+(setq org-tag-alist '(("@日本語" . ?n) ("@免許" . ?m) ("@work" . ?w) ("@home" . ?h) ("laptop" . ?l)))
 
 ;; ================== 简单任务关系 =======================
 (setq org-enforce-todo-dependencies t)
